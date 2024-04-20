@@ -64,3 +64,5 @@ LICENSE
 C03/ex04/ft_strstr
 C04/ex00/ft_strlen
 C04/ex01/ft_putstr
+C04/ex03/ft_atoi
+C04/ex02/ft_putnbr
