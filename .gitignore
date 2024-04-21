@@ -66,3 +66,7 @@ C04/ex00/ft_strlen
 C04/ex01/ft_putstr
 C04/ex03/ft_atoi
 C04/ex02/ft_putnbr
+C05/ex00/ft_iterative_factorial
+C05/ex01/ft_recursive_factorial
+C05/ex02/ft_iterative_power
+C05/ex03/ft_recursive_power
