@@ -1,39 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: friber <friber@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 15:30:01 by friber            #+#    #+#             */
-/*   Updated: 2024/04/27 16:03:17 by friber           ###   ########.fr       */
+/*   Created: 2024/04/27 16:32:04 by friber            #+#    #+#             */
+/*   Updated: 2024/04/27 16:41:31 by friber           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+int	ft_is_prime(int nb)
 {
-	if (nb < 0)
+	int	i;
+	int	prime;
+
+	i = 2;
+	prime = 1;
+	if (nb < 2)
 	{
 		return (0);
 	}
-	else if (nb <= 1)
+	if (nb == i)
 	{
-		return (1);
+		return (prime);
 	}
-	else
+	while (i <= nb / 2)
 	{
-		return (nb * ft_recursive_factorial(nb - 1));
+		if (nb % i == 0)
+		{
+			prime = 0;
+		}
+		i++;
 	}
+	return (prime);
 }
+
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	printf("%d\n", ft_recursive_factorial(-2));
-// 	printf("%d\n", ft_recursive_factorial(-1));
-// 	printf("%d\n", ft_recursive_factorial(0));
-// 	printf("%d\n", ft_recursive_factorial(1));
-// 	printf("%d\n", ft_recursive_factorial(2));
-// 	printf("%d\n", ft_recursive_factorial(3));
-// 	printf("%d\n", ft_recursive_factorial(4));
+// 	printf("%d\n", ft_is_prime(-1));
+// 	printf("%d\n", ft_is_prime(4));
+// 	printf("%d\n", ft_is_prime(7));
+// 	printf("%d\n", ft_is_prime(3));
+// 	printf("%d\n", ft_is_prime(2));
 // }
